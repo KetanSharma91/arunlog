@@ -9,6 +9,7 @@ html {
     --home-back: url('https://images.pexels.com/photos/29708760/pexels-photo-29708760/free-photo-of-historic-clock-tower-in-kotor-old-town.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     --btn-color: #da6e15;
     --border-color: #da6e15;
+    --btn-opacity: 0.28;
 }
 
 
@@ -125,6 +126,11 @@ h5 {
     margin-bottom: 20px;
 }
 
+i {
+    width: 18px;
+    display: inline-block;
+}
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -148,7 +154,6 @@ svg {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    /* background: #ffff62; */
     background: var(--back-color);
 }
 
@@ -163,8 +168,7 @@ svg {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    /* background-color: #e24040; */
-    background-color: var(--border-color);
+    background-color: var(--text-color);
     animation: move 700ms linear 0ms infinite;
     margin-right: 30px;
 }
@@ -189,7 +193,7 @@ svg {
     position: relative;
     z-index: 9999;
     height: 5px;
-    background-color: var(--border-color);
+    background-color: var(--text-color);
     transition: width 0.5s ease;
 }
 
@@ -227,7 +231,12 @@ svg {
     opacity: 85%;
     /* box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.8); */
     box-shadow: var(--box-shadow);
-    transition: all 300ms ease-out;
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.header.hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
@@ -255,9 +264,13 @@ svg {
     top: 12px;
     z-index: 999;
     right: 15px;
+}
+
+.menu i {
     width: 48px;
     height: 48px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" style="fill: fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>');
+    opacity: 1 !important;
+    color: var(---color);
 }
 
 
@@ -419,7 +432,7 @@ nav .navlist:hover ul li a.active {
     float: left;
     width: 45%;
     color: var(--back-color);
-    background: rgba(241, 243, 244, .24);
+    background: rgba(241, 243, 244, var(--btn-opacity));
 }
 
 .search-big-btn button {
@@ -564,28 +577,44 @@ mark {
     padding: 4%;
 }
 
+.jc-center {
+    justify-content: center !important;
+}
+
+.ta-center {
+    text-align: center;
+}
+
 .mb-10 {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
 }
 
 .mb-20 {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 .mb-40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
+}
+
+.p-10 {
+    padding: 10px !important;
+}
+
+.p-20 {
+    padding: 20px !important;
 }
 
 .px-40 {
-    padding: 40px 0;
+    padding: 40px 0 !important;
 }
 
 .pb-40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
 }
 
 .pt-40 {
-    padding-top: 40px;
+    padding-top: 40px !important;
 }
 
 .border-b {
@@ -598,44 +627,6 @@ mark {
 
 .border-l {
     border-left: 2px solid var(--border-color);
-}
-
-@media (min-width: 1200px) {
-
-    .col-3 {
-        flex: 0 0 auto;
-        width: 25%;
-    }
-
-    .col-4 {
-        flex: 0 0 auto;
-        width: 33.33333333%;
-    }
-
-    .col-8 {
-        flex: 0 0 auto;
-        width: 66.66666667%;
-    }
-
-    .col-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
-
-    .col-12 {
-        flex: 0 0 auto;
-        width: 100%;
-    }
-
-    .col-15 {
-        flex: 0 0 auto;
-        width: 50%;
-    }
-
-
-    .container-cn {
-        max-width: 600px;
-    }
 }
 
 /* ------------------------card---------------------------------------------------------------------------------- */
@@ -1389,4 +1380,83 @@ label {
     background-color: var(--btn-color);
     color: var(--back-color);
     opacity: 0.7;
+}
+
+.highlight {
+    font-weight: 700;
+    color: var(--btn-color);
+}
+
+/* --------------------------------------------------animations------------------------------------------------------------- */
+
+.slide-in-up.active {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-down.active {
+    opacity: 0;
+    animation: fadeInDown 1.5s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in-left.active {
+    opacity: 1;
+    animation: slideInLeft 1.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right.active {
+    opacity: 0;
+    animation: slideInRight 1.5s ease-out forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.box-shadow {
+    box-shadow: var(--box-shadow);
 }

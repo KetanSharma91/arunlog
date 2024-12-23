@@ -15,6 +15,11 @@
     <style>
         :root {
             --home-back: url(../img/home.jpeg);
+            --text-color: #e24040;
+            --back-color: #ffff62;
+            --box-shadow: 0px 3px 16px 0px rgba(229, 64, 64, 0.8);
+            /* --btn-color: #f1f187;
+            --border-color: #e24040; */
         }
 
         .header {
@@ -58,7 +63,7 @@
     <main class="main-content">
 
         <header class="header">
-            <div class="menu"><span></span></div>
+            <div class="menu"><i class="i-menu"></i></div>
             <a href="#" class="logo">
                 <img src="assets/img/logo.png" alt="logo" />
             </a>
@@ -66,14 +71,14 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
 
         <section class="hero dark-cost" id="home">
-            <div class="hero-content">
+            <div class="hero-content slide-in-up">
                 <p>Any route instead of any Destination
                 </p>
                 <h1>WELCOME TO ARUN LOZICS & SHIPPING SOLUTIONS
@@ -83,17 +88,17 @@
         </section>
 
         <div class="tabs-switch-wrapper">
-            <div class="tabs-switch">
+            <div class="tabs-switch slide-in-left">
                 <h5 class="cell-view w-1000">TRUST
                 </h5>
             </div>
-            <div class="tabs-switch">
+            <div class="tabs-switch slide-in-left">
                 <h5 class="cell-view w-1000">QUALITY</h5>
             </div>
-            <div class="tabs-switch">
+            <div class="tabs-switch slide-in-right">
                 <h5 class="cell-view w-1000">SAFETY</h5>
             </div>
-            <div class="tabs-switch">
+            <div class="tabs-switch slide-in-right">
                 <h5 class="cell-view w-1000"> RELIABILITY</h5>
             </div>
         </div>
@@ -101,7 +106,7 @@
         <div class="container">
             <h2 class="section-heading">OUR BRANCHES</h2>
             <div class="branches table-2">
-                <div class="row">
+                <div class="row slide-in-left">
                     <div class="table-set border-b">
                         <h2 class="mb-10">Pune:</h2>
                         <p>Sopan Nivas, A/P Chimbali Phata, Pune-Nashik Highway, Near Pavan Bank, Chakan, Pune - 412
@@ -122,8 +127,8 @@
                         <p>Phone: 99914 56007</p>
                     </div>
                 </div>
-                <div class="border-r"></div>
-                <div class="row">
+                <div class="border-r slide-in-up"></div>
+                <div class="row slide-in-right">
                     <div class="table-set border-b">
                         <h2 class="mb-10">Chennai:</h2>
                         <p>#148, Othawadai Stree, Puzhal, Chennai - 600066.</p>
@@ -149,17 +154,49 @@
         </div>
 
         <section class="about-section pt-40" id="about">
-            <div class="about-content">
-                <h2 class="section-heading">About Us</h2>
-                <p></p>
+            <h2 class="section-heading slide-in-up">About Us</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 slide-in-left">
+                        <p><span class="highlight">ARUN LOZICS & SHIPPING SOLUTIONS</span> is a trusted name in the
+                            logistics and shipping
+                            industry, founded in
+                            2010 in <span class="highlight">Bengaluru, India</span>, by <span class="highlight">Mr.
+                                Arun</span>. With over a decade of experience, we have
+                            built
+                            a reputation
+                            for delivering efficient, reliable, and cost-effective logistics solutions tailored to meet
+                            the
+                            unique needs of businesses across various sectors.</p>
+                        <p>Our expertise lies in end-to-end supply chain management, freight shipping, and
+                            transportation
+                            services. From managing complex shipping operations to ensuring timely delivery, we take
+                            pride
+                            in
+                            our ability to streamline logistics processes and optimize resources for our clients.</p>
+                        <p>Driven by innovation and customer-centric values, we leverage advanced technology and a
+                            dedicated
+                            team of professionals to ensure seamless operations and superior service quality. At <span
+                                class="highlight">ARUN
+                                LOZICS & SHIPPING SOLUTIONS</span>, we believe in fostering long-term partnerships by
+                            consistently exceeding client
+                            expectations and delivering measurable results.</p>
+                        <p>Let us move your world forward with precision and care.</p>
+                    </div>
+                    <div class="col-4 slide-in-right">
+                        <img class="col-img"
+                            src="https://images.pexels.com/photos/1070571/pexels-photo-1070571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="process pt-40" id="process">
-            <h2 class="section-heading">Why Choose Us</h2>
+            <h2 class="section-heading slide-in-up">Why Choose Us</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-12 float-left px-40 border-b">
+                    <div class="col-12 float-left px-40 border-b slide-in-left">
                         <div class="col-8 set ">
                             <div class="col-12">
                                 <h1 class="mb-3">Feasibility Study & Rout Survey
@@ -176,7 +213,7 @@
                             <img src="assets/img/whyus/1.jpeg" alt="image" class="col-img">
                         </div>
                     </div>
-                    <div class="col-12 float-left px-40 border-b">
+                    <div class="col-12 float-left px-40 border-b slide-in-right">
                         <div class="col-4 float-left">
                             <img src="assets/img/whyus/2.jpeg" alt="image" class="col-img">
                         </div>
@@ -191,7 +228,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 float-left px-40 border-b">
+                    <div class="col-12 float-left px-40 border-b slide-in-left">
                         <div class="col-8 set ">
                             <div class="col-12">
                                 <h1 class="mb-3">General & Break Bulk Cargo
@@ -211,7 +248,7 @@
                             <img src="assets/img/whyus/3.jpeg" alt="image" class="col-img">
                         </div>
                     </div>
-                    <div class="col-12 float-left px-40 border-b">
+                    <div class="col-12 float-left px-40 border-b slide-in-right">
                         <div class="col-4 float-left">
                             <img src="assets/img/whyus/4.jpeg" alt="image" class="col-img">
                         </div>
@@ -233,7 +270,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 float-left px-40 border-b">
+                    <div class="col-12 float-left px-40 border-b slide-in-left">
                         <div class="col-8 set ">
                             <div class="col-12">
                                 <h1 class="mb-3">Air Cargo & Railway
@@ -255,11 +292,57 @@
             </div>
         </section>
 
+        <section class="services pt-40" id="services">
+            <h2 class="section-heading slide-in-up">Services</h2>
+            <div class="container">
+                <p> At ARUN LOZICS & SHIPPING SOLUTIONS, we specialize in providing dependable and cost-effective
+                    logistics
+                    solutions, with a primary focus on road transport. Our services are designed to ensure smooth
+                    operations
+                    and timely deliveries, catering to businesses of all sizes.</p>
+                <div class="row jc-center">
+                    <div class="card box-shadow col-3 p-20">
+                        <h5 class="card-title">Road Transportation</h5>
+                        <p class="card-text">We offer reliable road transport services for goods of all types.
+                            Whether
+                            it's
+                            local or interstate deliveries, our well-maintained fleet and experienced drivers ensure
+                            your
+                            cargo reaches its destination on time and in perfect condition.</p>
+                    </div>
+                    <div class="card box-shadow col-3 p-20">
+                        <h5 class="card-title"> Goods Loading & Unloading</h5>
+                        <p class="card-text">Our team of professionals handles the loading and unloading of goods
+                            with utmost care, ensuring the safety of your shipments during transit and delivery.</p>
+                    </div>
+                    <div class="card box-shadow col-3 p-20">
+                        <h5 class="card-title"> Dedicated Customer Support</h5>
+                        <p class="card-text">We understand the importance of clear communication in logistics. Our
+                            dedicated support team provides real-time updates and ensures that your queries are
+                            resolved promptly.</p>
+                    </div>
+                    <div class="card box-shadow col-4 p-20">
+                        <h5 class="card-title">Fleet Management</h5>
+                        <p class="card-text">With a fleet of well-maintained vehicles, we offer efficient fleet
+                            management services to ensure your shipments are always on schedule. Our vehicles are
+                            equipped with GPS tracking for real-time updates, providing you with peace of mind
+                            throughout the journey.</p>
+                    </div>
+                    <div class="card box-shadow col-4 p-20">
+                        <h5 class="card-title"> Intercity & Interstate Transport</h5>
+                        <p class="card-text">We specialize in long-distance road transport across cities and states,
+                            ensuring your goods are safely delivered on time. Whether it's a small or large shipment, we
+                            offer flexible solutions to meet your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact pt-40" id="contact">
-            <h2 class="section-heading">Contact Us</h2>
+            <h2 class="section-heading slide-in-up">Contact Us</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-15 w-100">
+                    <div class="col-15 w-100 slide-in-left">
                         <div class="card">
                             <h5>Send Us a Message</h5>
                             <form action="">
@@ -278,11 +361,12 @@
                                     <textarea name="message" id="message" rows="3" placeholder="Message"
                                         class="form-control"></textarea>
                                 </div>
-                                <button class="btn contact-btn" type="submit" name="submit" aria-label="Submit your message">Submit</button>
+                                <button class="btn contact-btn" type="submit" name="submit"
+                                    aria-label="Submit your message">Submit</button>
                             </form>
                         </div>
                     </div>
-                    <div class="col-15">
+                    <div class="col-15 slide-in-right">
                         <div class="card">
                             <div class="contact-info">
                                 <div class="info-item mb-40">
@@ -317,11 +401,11 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer slide-in-down">
             <ul class="social">
-                <li><a href="#"><i class="i-facebook"></i></a></li>
-                <li><a href="#"><i class="i-instagram"></i></a></li>
-                <li><a href="#"><i class="i-linkedin"></i></a></li>
+                <li><a href="#" target="_blank"><i class="i-facebook"></i></a></li>
+                <li><a href="#" target="_blank"><i class="i-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="i-linkedin"></i></a></li>
             </ul>
 
             <ul class="footer-nav mb-20">
@@ -331,7 +415,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <p>&copy; 2024 ketan Sharma | All Rights Reserved</p>
+            <p class="ta-center mb-20">&copy; 2024 arunlozicsshippings | All Rights Reserved</p>
+            <p>Made with <i class="i-heart"></i> by <a href="https://ketan.rf.gd/" target="https://ketan.rf.gd/">Ketan Sharma</a></p>
         </footer>
 
     </main>

@@ -40,7 +40,7 @@ window.onload = function () {
   let navbar = document.querySelector('nav');
 
   let isDarkMode = false;
-  if (mode) { // Check if 'theme' element exists
+  if (mode) {
     mode.addEventListener('click', () => {
       const root = document.documentElement;
 
@@ -68,6 +68,21 @@ window.onload = function () {
       navbar.classList.toggle('show');
     };
   }
+
+  let lastScrollY = window.scrollY;
+  const header = document.querySelector('.header');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down
+      header.classList.add('hidden');
+    } else {
+      // Scrolling up
+      header.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+
 
 
   // document.querySelectorAll('.navlist > .navlista').forEach(link => {
@@ -158,9 +173,9 @@ window.onload = function () {
       modal.style.display = "block";
     }
 
-    // closeModalBtn.onclick = function () {
-    //   modal.style.display = "none";
-    // }
+    closeModalBtn.onclick = function () {
+      modal.style.display = "none";
+    }
 
     closeModalBtnFooter.onclick = function () {
       modal.style.display = "none";
@@ -172,5 +187,22 @@ window.onload = function () {
       }
     }
   }
+
+  // Select all elements with animation classes
+  const animatedElements = document.querySelectorAll('.slide-in-right, .slide-in-left, .slide-in-up, .slide-in-down');
+
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add the active class to trigger the animation
+        entry.target.classList.add('active');
+      }
+    });
+  });
+
+  // Observe each animated element
+  animatedElements.forEach((el) => observer.observe(el));
+
 
 }
